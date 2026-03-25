@@ -27,7 +27,7 @@ export default function Footer() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -36,14 +36,14 @@ export default function Footer() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY_HERE",
+          access_key: "e2191d3e-96b1-4fa8-a560-f591150b99c0",
           name: form.name,
           email: form.email,
           company: form.company,
           message: form.message,
         }),
       });
-      
+
       const result = await response.json();
       if (result.success) {
         setSent(true);
