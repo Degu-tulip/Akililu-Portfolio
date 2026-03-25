@@ -6,10 +6,10 @@ import {
 } from 'lucide-react';
 
 const contactDetails = [
-  { icon: Mail, label: 'Email', value: 'akililu.tesfaye@engineer.com', href: 'mailto:akililu.tesfaye@engineer.com' },
-  { icon: Phone, label: 'Phone', value: '+251 911 000 000', href: 'tel:+251911000000' },
+  { icon: Mail, label: 'Email', value: 'danidegu960@gmail.com', href: 'mailto:danidegu960@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '+251 911 745 604', href: 'tel:+251911745604' },
+  { icon: Send, label: 'Telegram', value: 'Contact on Telegram', href: 'https://t.me/+251911745604' },
   { icon: MapPin, label: 'Location', value: 'Addis Ababa, Ethiopia', href: '#' },
-  { icon: Globe, label: 'Availability', value: 'Open to International Projects', href: '#' },
 ];
 
 const fadeUp = {
@@ -24,13 +24,39 @@ export default function Footer() {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "YOUR_WEB3FORMS_ACCESS_KEY_HERE",
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          message: form.message,
+        }),
+      });
+      
+      const result = await response.json();
+      if (result.success) {
+        setSent(true);
+      } else {
+        console.error("Submission failed");
+        alert("Failed to send message. Please try opening the email link directly.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Network error. Please try opening the email link directly.");
+    } finally {
       setSending(false);
-      setSent(true);
-    }, 1500);
+    }
   };
 
   return (
