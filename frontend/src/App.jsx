@@ -16,12 +16,17 @@ export default function App() {
       <Navbar />
 
       {/* Main content */}
-      <main>
+      <main className="flex flex-col gap-32 pb-32">
         <Hero />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent max-w-7xl mx-auto w-full" />
         <Profile />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent max-w-7xl mx-auto w-full" />
         <ExpertiseToggle />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent max-w-7xl mx-auto w-full" />
         <Projects />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent max-w-7xl mx-auto w-full" />
         <Standards />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent max-w-7xl mx-auto w-full" />
         <Footer />
       </main>
     </div>

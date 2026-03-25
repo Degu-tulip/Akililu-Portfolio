@@ -9,8 +9,7 @@ const expertise = {
     accentColor: 'electric-blue',
     accentHex: '#00b4ff',
     tagline: 'High-Voltage Power Systems & Grid Infrastructure',
-    description:
-      'Specialized in the full lifecycle of high-voltage substations (11kV to 230kV), ensuring reliable grid connectivity for major infrastructure.',
+    description: 'Delivering high-voltage substations from 11kV to 230kV with complete EPC lifecycle management.',
     skills: [
       { label: 'HV Substation Design', level: 95 },
       { label: 'Protection & Control Systems', level: 90 },
@@ -34,8 +33,7 @@ const expertise = {
     accentColor: 'amber',
     accentHex: '#f59e0b',
     tagline: 'Heavy Industrial Facilities & Infrastructure Delivery',
-    description:
-      'Expert management of large-scale industrial projects—including parks, manufacturing plants, and heavy civil infrastructure—across the full EPC lifecycle.',
+    description: 'Managing large-scale industrial parks, plants, and heavy civil infrastructure with strict global standards.',
     skills: [
       { label: 'EPC Project Management', level: 96 },
       { label: 'Construction Planning & Scheduling', level: 93 },
@@ -82,7 +80,7 @@ export default function ExpertiseToggle() {
   const isBlue = active === 'electrical';
 
   return (
-    <section id="expertise" className="py-40 relative overflow-hidden">
+    <section id="expertise" className="py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(0,180,255,0.03),transparent)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6">

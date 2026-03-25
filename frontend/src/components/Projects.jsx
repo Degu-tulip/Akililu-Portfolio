@@ -11,8 +11,7 @@ const projects = [
     client: 'Ethiopian Electric Power / CGGC (China)',
     location: 'Modjo, Ethiopia',
     status: 'Completed',
-    description:
-      'Designed and supervised the construction of a 132/33kV main grid substation serving the Modjo Industrial Park. Coordinated with Chinese EPC contractor CGGC on procurement of GIS equipment and protection relay systems.',
+    description: 'Designed and supervised the 132/33kV Modjo GIS substation with CGGC.',
     specs: [
       { key: 'Voltage Level', value: '132/33kV' },
       { key: 'Transformer', value: '2×50MVA' },
@@ -29,8 +28,7 @@ const projects = [
     client: 'IPDC Ethiopia / CCCC (China)',
     location: 'Hawassa, Ethiopia',
     status: 'Completed',
-    description:
-      'Led the civil and MEP construction management for Phase II of Hawassa Industrial Park, covering 80,000m² of factory sheds and utility infrastructure. Coordinated Chinese construction teams and local subcontractors.',
+    description: 'Led civil and MEP construction for 80,000m² of factory sheds with CCCC.',
     specs: [
       { key: 'Floor Area', value: '80,000 m²' },
       { key: 'Sheds', value: '16 Factory Units' },
@@ -47,8 +45,7 @@ const projects = [
     client: 'Ethiopian Electric Utility',
     location: 'Addis Ababa Region, Ethiopia',
     status: 'Completed',
-    description:
-      'Managed the design and EPC delivery of 8 distribution substations (33/11kV) across the Addis Ababa region, including SCADA integration, RTU installation, and protection system commissioning.',
+    description: 'Managed EPC delivery of 8 distribution substations with SCADA integration.',
     specs: [
       { key: 'Voltage Level', value: '33/11kV' },
       { key: 'Substations', value: '8 Units' },
@@ -65,8 +62,7 @@ const projects = [
     client: 'Habesha Cement S.C. / SinoSteel (China)',
     location: 'Dire Dawa, Ethiopia',
     status: 'Completed',
-    description:
-      'Construction management for heavy industrial cement factory expansion including structural steel erection, concrete works, and equipment foundations in partnership with SinoSteel Engineering.',
+    description: 'Construction management for cement factory expansion with SinoSteel.',
     specs: [
       { key: 'Capacity', value: '3,000 TPD Clinker' },
       { key: 'Steel Work', value: '2,400 Tons' },
@@ -83,8 +79,7 @@ const projects = [
     client: 'GIZ / Rural Electrification Program',
     location: 'Tigray, Ethiopia',
     status: 'Completed',
-    description:
-      'Designed and commissioned a solar-hybrid medium voltage substation providing grid-to-off-grid transition capability, integrating renewable sources with conventional 33kV distribution for rural electrification.',
+    description: 'Designed a solar-hybrid MV substation for rural electrification.',
     specs: [
       { key: 'Voltage Level', value: '33/0.4kV MV' },
       { key: 'Solar PV', value: '500kWp Integrated' },
@@ -101,8 +96,7 @@ const projects = [
     client: 'IPDC / China State Construction',
     location: 'Bole Lemi, Addis Ababa',
     status: 'Completed',
-    description:
-      'Project managed utility infrastructure works (water, power, roads, drainage) for the Bole Lemi Industrial Zone, coordinating Chinese contractor teams and ensuring HSE compliance throughout.',
+    description: 'Managed utility infrastructure works for the Bole Lemi zone with CSCEC.',
     specs: [
       { key: 'Zone Area', value: '156 Hectares' },
       { key: 'Roads', value: '12 km Internal' },
@@ -128,7 +122,7 @@ export default function Projects() {
     : projects.filter((p) => p.type === activeFilter);
 
   return (
-    <section id="projects" className="py-40 relative overflow-hidden">
+    <section id="projects" className="py-16 relative overflow-hidden">
       <div className="absolute inset-0 blueprint-grid opacity-50 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -148,7 +142,7 @@ export default function Projects() {
             <span className="text-electric-blue">Impact.</span>
           </h2>
           <p className="text-slate-text max-w-2xl">
-            Landmark infrastructure projects delivered across East Africa with global partners.
+            Key infrastructure delivered with global partners.
           </p>
         </motion.div>
 

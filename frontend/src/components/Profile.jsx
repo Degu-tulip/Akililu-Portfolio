@@ -78,7 +78,7 @@ export default function Profile() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="profile" className="relative py-40 overflow-hidden">
+    <section id="profile" className="relative py-16 overflow-hidden">
       {/* Subtle background accent */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(ellipse_60%_80%_at_100%_50%,rgba(0,180,255,0.04),transparent)] pointer-events-none" />
 
@@ -129,10 +129,10 @@ export default function Profile() {
 
             <div className="space-y-5 text-slate-text leading-relaxed">
               <p>
-                I am an engineering specialist with a Master's degree, bringing over a decade of expertise in <strong className="text-white">Electrical Substation Systems</strong> and <strong className="text-white">Industrial Construction Management</strong>.
+                I am an Engineering Specialist with a Master's degree, blending expertise in Electrical Substations and Industrial Construction.
               </p>
               <p>
-                I lead large-scale EPC projects across East Africa — partnering with <strong className="text-electric-blue">Chinese firms</strong> to deliver high-standard infrastructure. My dual expertise bridges electrical precision with heavy industrial logistics.
+                With a decade of EPC leadership across East Africa, I partner with global firms to deliver major infrastructure.
               </p>
             </div>
 

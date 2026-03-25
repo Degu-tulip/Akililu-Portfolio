@@ -56,7 +56,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
 export default function Standards() {
   return (
-    <section id="standards" className="py-40 relative overflow-hidden">
+    <section id="standards" className="py-16 relative overflow-hidden">
       {/* Bg gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(245,158,11,0.04),transparent)] pointer-events-none" />
 
@@ -126,7 +126,7 @@ export default function Standards() {
               </h3>
             </div>
             <p className="text-slate-text text-sm mb-6 leading-relaxed">
-              Partnering with leading Chinese state-owned enterprises (SOEs) on high-value EPC projects for seamless global collaboration.
+              Partnering with Chinese SOEs for seamless EPC execution.
             </p>
             <div className="space-y-3">
               {chinesePartners.map((partner, i) => (
