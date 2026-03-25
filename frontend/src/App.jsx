@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-navy text-white-text antialiased">
+    <div className="min-h-screen bg-navy text-white-text antialiased overflow-x-hidden max-w-full w-full relative">
       {/* Scanline animation overlay */}
       <div className="scanline" />
 

@@ -140,7 +140,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="grid grid-cols-3 gap-4 max-w-lg mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto w-full"
         >
           {[
             { value: '10+', label: 'Years Experience' },
