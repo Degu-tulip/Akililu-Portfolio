@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-electric-blue: #00b4ff;
+  --color-electric-blue-dark: #0080c0;
+  --color-electric-blue-glow: rgba(0, 180, 255, 0.15);
+  --color-amber: #f59e0b;
+  --color-amber-dark: #d97706;
+  --color-amber-glow: rgba(245, 158, 11, 0.15);
+  --color-navy: #03070f;
+  --color-navy-800: #060d1a;
+  --color-navy-700: #0a1628;
+  --color-navy-600: #0d1f38;
+  --color-navy-500: #132744;
+  --color-slate-text: #94a3b8;
+  --color-white-text: #e2e8f0;
+  --font-heading: 'Rajdhani', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #00b4ff #03070f;
+}
+
+body {
+  background-color: #03070f;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #03070f;
+}
+::-webkit-scrollbar-thumb {
+  background: #00b4ff;
+  border-radius: 2px;
+}
+
+/* Blueprint grid overlay */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(0, 180, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Glowing text */
+.text-glow-blue {
+  text-shadow: 0 0 20px rgba(0, 180, 255, 0.6), 0 0 40px rgba(0, 180, 255, 0.2);
+}
+.text-glow-amber {
+  text-shadow: 0 0 20px rgba(245, 158, 11, 0.6), 0 0 40px rgba(245, 158, 11, 0.2);
+}
+
+/* Border glow */
+.border-glow-blue {
+  box-shadow: 0 0 15px rgba(0, 180, 255, 0.2), inset 0 0 15px rgba(0, 180, 255, 0.03);
+}
+.border-glow-amber {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.2), inset 0 0 15px rgba(245, 158, 11, 0.03);
+}
+
+/* Scan line animation */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,180,255,0.2), transparent);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Pulse animation */
+@keyframes pulse-blue {
+  0%, 100% { box-shadow: 0 0 5px rgba(0,180,255,0.3); }
+  50% { box-shadow: 0 0 20px rgba(0,180,255,0.7), 0 0 40px rgba(0,180,255,0.3); }
+}
+.pulse-blue {
+  animation: pulse-blue 2s ease-in-out infinite;
+}
+
+/* Circuit line decorations */
+.circuit-line {
+  position: relative;
+}
+.circuit-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 60px;
+  height: 2px;
+  background: #00b4ff;
+}
+.circuit-line::after {
+  content: '';
+  position: absolute;
+  left: 60px;
+  bottom: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00b4ff;
+  transform: translateY(50%);
+}
+
+/* Number counter animation */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
