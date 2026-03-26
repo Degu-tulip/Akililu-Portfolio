@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { GraduationCap, Briefcase, Globe, Award, Users, TrendingUp, Phone, Mail, Linkedin, Facebook, Edit3 } from 'lucide-react';
+import { GraduationCap, Briefcase, Globe, Award, Users, TrendingUp } from 'lucide-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -101,91 +101,52 @@ export default function Profile() {
 
         {/* Single-column centered layout */}
         <div className="flex flex-col items-center w-full max-w-5xl mx-auto gap-16">
-          
-          {/* Image-Style Banner Layout */}
-        <div className="w-full max-w-5xl mx-auto mt-6 relative shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] rounded-xl">
-          
-          <div className="bg-white rounded-xl overflow-hidden w-full text-[#1b3a5a] relative">
-            
-            {/* Dark Blue Header Banner */}
-            <div className="bg-[#1b3a5a] text-white pt-10 pb-10 px-6 md:px-12 relative flex flex-col items-center md:items-start text-center md:text-left z-10 w-full">
-                
-                <div className="flex flex-col md:flex-row justify-between items-center w-full gap-8">
-                  <div className="flex-1 md:border-r border-white/20 pb-6 md:pb-0 pr-0 md:pr-8 w-full">
-                    <h3 className="text-4xl md:text-5xl font-black mb-2 tracking-tight whitespace-nowrap" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      Akililu Tesfaye
-                    </h3>
-                    <p className="text-[#aabfd3] font-bold tracking-widest text-[11px] md:text-xs uppercase w-full border-b border-white/20 md:border-none pb-4 md:pb-0">
-                      Engineer & Contractor
-                    </p>
-                  </div>
-
-                  {/* Social Icons row */}
-                  <div className="flex items-center justify-center gap-3 text-white flex-wrap w-full md:w-auto">
-                    <a href="#" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#1b3a5a] transition-all">
-                      <Globe size={18} />
-                    </a>
-                    <a href="tel:+251911745604" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#1b3a5a] transition-all">
-                      <Phone size={18} />
-                    </a>
-                    <a href="mailto:danidegu960@gmail.com" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#1b3a5a] transition-all">
-                      <Mail size={18} />
-                    </a>
-                    <a href="#" className="w-10 h-10 flex items-center justify-center hover:text-blue-300 transition-all">
-                      <Facebook size={24} />
-                    </a>
-                    <a href="#" className="w-10 h-10 flex items-center justify-center hover:text-blue-300 transition-all">
-                      <Linkedin size={24} />
-                    </a>
-                    <span className="text-sm font-light tracking-wide ml-2 hidden lg:block">Contact</span>
-                  </div>
-                </div>
-
+          {/* Top: Bio */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={fadeUp}
+            className="w-full flex flex-col items-center"
+          >
+            {/* Name card */}
+            <div className="mb-8 p-8 border border-electric-blue/30 rounded-sm bg-navy-700/50 relative overflow-hidden text-center w-full max-w-2xl">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-electric-blue via-transparent to-transparent" />
+              <p className="text-xs text-electric-blue font-mono tracking-widest uppercase mb-2">Lead Engineer</p>
+              <h3
+                className="text-3xl font-black text-white mb-1"
+                style={{ fontFamily: 'Rajdhani, sans-serif' }}
+              >
+                Akililu Tesfaye Dikaso
+              </h3>
+              <p className="text-amber text-sm font-semibold tracking-wider">
+                M.Sc. Industrial & Electrical Power Engineering
+              </p>
             </div>
 
-            {/* Bottom White Area (Experience Line) */}
-            <div className="pt-12 pb-16 px-6 md:px-12 relative z-10 flex flex-col items-center md:items-start text-center md:text-left w-full">
-              
-              <div className="w-full flex flex-col md:flex-row items-center md:items-start gap-6 mb-8 mx-auto md:mx-0">
-                <div className="w-12 h-12 rounded bg-[#1b3a5a] text-white flex items-center justify-center flex-shrink-0 shadow-md">
-                  <Edit3 size={24} />
-                </div>
-                <div className="flex-1 w-full">
-                  <h4 className="text-3xl font-black text-[#1b3a5a] mb-2 tracking-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    EXPERIENCE
-                  </h4>
-                  <div className="border-b-2 border-[#aabfd3] pb-3 mb-8 w-full md:w-auto">
-                    <p className="font-bold text-[#1b3a5a] tracking-widest uppercase text-xs md:text-sm">
-                      Electrical | Construction
-                    </p>
-                  </div>
-                  
-                  <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-light mb-10 w-full">
-                    Engineering Specialist with a <strong className="text-[#1b3a5a]">Master's Degree</strong>. <br className="hidden md:block"/>
-                    Leading huge EPC projects across East Africa in Substations & Industrial Construction.
-                  </p>
-
-                  {/* Desktop Stats Grid in White Area */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
-                    <div className="bg-[#f0f4f8] border border-[#aabfd3]/30 p-5 rounded-lg text-center shadow-sm">
-                      <div className="text-2xl font-black text-[#1b3a5a]">M.Sc.</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-widest mt-2 font-semibold">Degree Level</div>
-                    </div>
-                    <div className="bg-[#f0f4f8] border border-[#aabfd3]/30 p-5 rounded-lg text-center shadow-sm">
-                      <div className="text-2xl font-black text-[#1b3a5a]">132kV</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-widest mt-2 font-semibold">HV Experience</div>
-                    </div>
-                    <div className="bg-[#f0f4f8] border border-[#aabfd3]/30 p-5 rounded-lg text-center shadow-sm">
-                      <div className="text-2xl font-black text-[#1b3a5a]">EPC</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-widest mt-2 font-semibold">Delivery Model</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+            <div className="space-y-6 text-white text-center leading-relaxed">
+              <p className="text-2xl md:text-3xl font-light">
+                Engineering Specialist with a <strong className="text-amber">Master's Degree</strong>.
+              </p>
+              <p className="text-xl md:text-2xl text-slate-text">
+                Leading huge EPC projects across East Africa in Substations & Industrial Construction.
+              </p>
             </div>
-          </div>
-        </div>
+
+            {/* Key metrics */}
+            <div className="mt-8 grid grid-cols-3 gap-3">
+              {[
+                { val: 'M.Sc.', label: 'Degree Level' },
+                { val: '132kV', label: 'HV Experience' },
+                { val: 'EPC', label: 'Delivery Model' },
+              ].map((m) => (
+                <div key={m.label} className="text-center p-3 border border-white/5 rounded-sm bg-white/2">
+                  <div className="text-xl font-black text-amber font-heading" style={{ fontFamily: 'Rajdhani, sans-serif' }}>{m.val}</div>
+                  <div className="text-xs text-slate-text/60 tracking-wider uppercase mt-1">{m.label}</div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
 
           {/* Bottom: Highlight cards */}
           <motion.div
