@@ -52,17 +52,7 @@ export default function Hero() {
       {/* Main content */}
       <div className="relative z-10 w-full max-w-5xl px-6 flex flex-col items-center text-center">
         
-        {/* Profile Avatar */}
-        <motion.div
-           initial={{ opacity: 0, scale: 0.8 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ duration: 0.8, ease: "easeOut" }}
-           className="relative w-36 h-36 md:w-44 md:h-44 rounded-full border-[3px] border-electric-blue/50 p-1 mb-6 shadow-[0_0_40px_rgba(0,180,255,0.3)] bg-[#03070f] z-20"
-        >
-          <img src="/profile.jpg" alt="Akililu Tesfaye" className="w-full h-full rounded-full object-cover" onError={(e) => { e.target.style.display='none' }} />
-          <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(0,180,255,0.4)] pointer-events-none" />
-          <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,180,255,0.2),transparent)] flex items-center justify-center absolute top-0 left-0 -z-10 rounded-full" />
-        </motion.div>
+
 
         {/* Status badge */}
         <motion.div
@@ -93,6 +83,18 @@ export default function Hero() {
             </span>
             <span className="block text-white">TESFAYE</span>
           </h1>
+        </motion.div>
+
+        {/* Profile Avatar (moved under name) */}
+        <motion.div
+           initial={{ opacity: 0, scale: 0.8 }}
+           animate={{ opacity: 1, scale: 1 }}
+           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+           className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-[3px] border-electric-blue/50 p-1 mb-10 shadow-[0_0_40px_rgba(0,180,255,0.3)] bg-[#03070f] z-20 mx-auto"
+        >
+          <img src="/images/ake's pic.jpg" alt="Akililu Tesfaye" className="w-full h-full rounded-full object-cover" onError={(e) => { e.target.style.display='none' }} />
+          <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(0,180,255,0.5)] pointer-events-none" />
+          <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,180,255,0.2),transparent)] flex items-center justify-center absolute top-0 left-0 -z-10 rounded-full" />
         </motion.div>
 
         {/* Subtitle */}
