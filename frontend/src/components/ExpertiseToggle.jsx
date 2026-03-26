@@ -92,11 +92,8 @@ export default function ExpertiseToggle() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <span className="font-mono text-electric-blue text-xs tracking-[0.3em] uppercase mb-3 block">
-            02 / Dual Expertise
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black text-white" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-            Select Your Domain
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+            02 / DUAL EXPERTISE
           </h2>
         </motion.div>
 

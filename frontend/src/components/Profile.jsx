@@ -85,21 +85,17 @@ export default function Profile() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          variants={fadeUp}
-          className="mb-16"
+           initial="hidden"
+           whileInView="visible"
+           viewport={{ once: true, margin: '-60px' }}
+           variants={fadeUp}
+           className="mb-16"
         >
-          <span className="font-mono text-electric-blue text-xs tracking-[0.3em] uppercase mb-3 block">
-            01 / Professional Profile
-          </span>
           <h2
-            className="text-4xl md:text-5xl font-black text-white mb-6 circuit-line"
+            className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line"
             style={{ fontFamily: 'Rajdhani, sans-serif' }}
           >
-            Engineering Excellence,<br />
-            <span className="text-electric-blue">Delivered Globally.</span>
+            01 / PROFESSIONAL PROFILE
           </h2>
         </motion.div>
 

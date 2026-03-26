@@ -63,18 +63,14 @@ export default function Standards() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section header */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-          className="mb-16"
+           initial="hidden"
+           whileInView="visible"
+           viewport={{ once: true }}
+           variants={fadeUp}
+           className="mb-16"
         >
-          <span className="font-mono text-electric-blue text-xs tracking-[0.3em] uppercase mb-3 block">
-            04 / Global Standards & Partnerships
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black text-white" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-            Built to{' '}
-            <span className="text-amber text-glow-amber">Global Standards.</span>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+            04 / GLOBAL STANDARDS & PARTNERSHIPS
           </h2>
         </motion.div>
 

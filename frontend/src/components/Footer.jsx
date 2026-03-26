@@ -74,16 +74,9 @@ export default function Footer() {
             variants={fadeUp}
             className="mb-14"
           >
-            <span className="font-mono text-electric-blue text-xs tracking-[0.3em] uppercase mb-3 block">
-              05 / Contact & CV
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-              Let's Build Something{' '}
-              <span className="text-electric-blue">Powerful.</span>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+              05 / CONTACT & CV
             </h2>
-            <p className="text-slate-text mt-4 max-w-xl">
-              Open to international EPC projects and global partnerships.
-            </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-14">

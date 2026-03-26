@@ -128,22 +128,15 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-10"
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.6 }}
+           className="mb-12"
         >
-          <span className="font-mono text-electric-blue text-xs tracking-[0.3em] uppercase mb-3 block">
-            03 / Project Case Studies
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-4" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-            Engineered for{' '}
-            <span className="text-electric-blue">Impact.</span>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+            03 / PROJECT CASE STUDIES
           </h2>
-          <p className="text-slate-text max-w-2xl">
-            Key infrastructure delivered with global partners.
-          </p>
         </motion.div>
 
         {/* Filter tabs */}
