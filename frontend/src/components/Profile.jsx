@@ -103,99 +103,99 @@ export default function Profile() {
         <div className="flex flex-col items-center w-full max-w-5xl mx-auto gap-16">
           
           {/* Image-Style Banner Layout */}
-          <div className="w-full mt-6 relative shadow-2xl shadow-black/50">
+        <div className="w-full max-w-5xl mx-auto mt-6 relative shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] rounded-xl">
+          
+          <div className="bg-white rounded-xl overflow-hidden w-full text-[#1b3a5a] relative">
             
-            {/* Main White Card Body */}
-          <div className="bg-white rounded-lg overflow-hidden w-full text-[#1b3a5a]">
-            
+            {/* The absolute avatar that lives in its own coordinates, immune to flex bugs */}
+            {/* Desktop: left-aligned sliding into the white space. Mobile: perfectly centered sliding into the white space */}
+            <div className="absolute left-1/2 -translate-x-[50%] md:translate-x-0 md:left-8 top-8 md:top-12 w-44 h-44 md:w-52 md:h-52 rounded-full border-[6px] md:border-[10px] border-white md:border-[#1b3a5a] bg-gradient-to-br from-gray-200 to-gray-400 shadow-2xl overflow-hidden flex items-center justify-center z-30">
+               {/* Note to User: Put your photo in frontend/public/profile.jpg! */}
+               <img src="/profile.jpg" alt="Akililu Tesfaye" className="w-full h-full object-cover p-1 bg-white rounded-full" onError={(e) => { e.target.style.display='none' }} />
+               {/* Fallback avatar shape if no image is found */}
+               <div className="w-full h-full bg-[radial-gradient(circle_at_center,#fff,#d1d5db)] flex items-center justify-center absolute -z-10">
+                 <div className="w-20 h-20 rounded-full bg-white/40 blur-xl absolute" />
+               </div>
+            </div>
+
             {/* Dark Blue Header Banner */}
-            <div className="bg-[#1b3a5a] text-white pt-6 pb-6 pr-8 pl-40 md:pl-56 relative min-h-[140px] flex flex-col justify-center">
-              
-              {/* Overlapping Profile Circle */}
-              <div className="absolute -left-6 md:left-8 top-1/2 -translate-y-1/2 w-40 h-40 md:w-48 md:h-48 rounded-full border-[10px] border-[#1b3a5a] bg-gradient-to-br from-gray-100 to-gray-300 shadow-xl overflow-hidden flex items-center justify-center z-20">
-                {/* Fallback avatar shape if no image */}
-                <div className="w-full h-full bg-[radial-gradient(circle_at_center,#fff,#d1d5db)] flex items-center justify-center border border-gray-200 rounded-full">
-                  <div className="w-20 h-20 rounded-full bg-white/20 blur-xl absolute" />
-                </div>
-              </div>
-
-              {/* Text & Socials container inside banner */}
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10 w-full">
+            <div className="bg-[#1b3a5a] text-white pt-56 pb-8 px-6 md:pt-14 md:pb-12 md:pl-64 md:pr-10 relative min-h-[160px] flex flex-col items-center md:items-start text-center md:text-left z-10 w-full">
                 
-                {/* Name and Title */}
-                <div className="flex-1 border-b md:border-b-0 md:border-r border-white/20 pb-4 md:pb-0 pr-0 md:pr-6">
-                  <h3 className="text-3xl md:text-5xl font-bold mb-1 tracking-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    Akililu Tesfaye
-                  </h3>
-                  <p className="text-[#aabfd3] font-medium tracking-widest text-xs md:text-sm uppercase">
-                    Engineer & Contractor
-                  </p>
-                </div>
+                <div className="flex flex-col md:flex-row justify-between items-center w-full gap-8">
+                  <div className="flex-1 md:border-r border-white/20 pb-6 md:pb-0 pr-0 md:pr-8 w-full">
+                    <h3 className="text-4xl md:text-5xl font-black mb-2 tracking-tight whitespace-nowrap" style={{ fontFamily: 'Inter, sans-serif' }}>
+                      Akililu Tesfaye
+                    </h3>
+                    <p className="text-[#aabfd3] font-bold tracking-widest text-[11px] md:text-xs uppercase w-full border-b border-white/20 md:border-none pb-4 md:pb-0">
+                      Engineer & Contractor
+                    </p>
+                  </div>
 
-                {/* Social Icons row */}
-                <div className="flex items-center gap-4 text-white">
-                  <a href="#" className="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#1b3a5a] transition-all">
-                    <Globe size={14} />
-                  </a>
-                  <a href="tel:+251911745604" className="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#1b3a5a] transition-all">
-                    <Phone size={14} />
-                  </a>
-                  <a href="mailto:danidegu960@gmail.com" className="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#1b3a5a] transition-all">
-                    <Mail size={14} />
-                  </a>
-                  <a href="#" className="w-8 h-8 flex items-center justify-center hover:text-blue-300 transition-all">
-                    <Facebook size={18} />
-                  </a>
-                  <a href="#" className="w-8 h-8 flex items-center justify-center hover:text-blue-300 transition-all">
-                    <Linkedin size={18} />
-                  </a>
-                  <span className="text-sm font-light tracking-wide ml-2">Contact</span>
+                  {/* Social Icons row */}
+                  <div className="flex items-center justify-center gap-3 text-white flex-wrap w-full md:w-auto">
+                    <a href="#" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#1b3a5a] transition-all">
+                      <Globe size={18} />
+                    </a>
+                    <a href="tel:+251911745604" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#1b3a5a] transition-all">
+                      <Phone size={18} />
+                    </a>
+                    <a href="mailto:danidegu960@gmail.com" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#1b3a5a] transition-all">
+                      <Mail size={18} />
+                    </a>
+                    <a href="#" className="w-10 h-10 flex items-center justify-center hover:text-blue-300 transition-all">
+                      <Facebook size={24} />
+                    </a>
+                    <a href="#" className="w-10 h-10 flex items-center justify-center hover:text-blue-300 transition-all">
+                      <Linkedin size={24} />
+                    </a>
+                    <span className="text-sm font-light tracking-wide ml-2 hidden lg:block">Contact</span>
+                  </div>
                 </div>
-              </div>
 
             </div>
 
             {/* Bottom White Area (Experience Line) */}
-            <div className="pt-20 pb-16 px-8 md:pl-56 md:pr-12 relative">
+            <div className="pt-10 pb-16 px-6 md:pl-64 md:pr-12 relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
+              
               {/* Contact indicator below circle */}
-              <div className="absolute left-8 md:left-20 top-4 w-24 text-center">
-                <span className="text-[#1b3a5a] font-bold text-sm tracking-widest uppercase border-b-2 border-[#1b3a5a] pb-1">
-                  Contact
+              <div className="md:absolute md:left-14 md:top-8 w-40 text-center mb-10 md:mb-0 flex items-center justify-center mt-4 md:mt-0">
+                <span className="text-[#1b3a5a] font-black text-[10px] md:text-xs tracking-[0.2em] uppercase border-b-2 border-[#1b3a5a] pb-2">
+                  Contact Menu
                 </span>
               </div>
 
-              <div className="w-full flex items-start gap-4 mb-8">
-                <div className="w-10 h-10 rounded bg-[#1b3a5a] text-white flex items-center justify-center flex-shrink-0 mt-1">
-                  <Edit3 size={20} />
+              <div className="w-full flex flex-col md:flex-row items-center md:items-start gap-6 mb-8 max-w-2xl mx-auto md:mx-0">
+                <div className="w-12 h-12 rounded bg-[#1b3a5a] text-white flex items-center justify-center flex-shrink-0 shadow-md">
+                  <Edit3 size={24} />
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-2xl font-bold text-[#1b3a5a] mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+                <div className="flex-1 w-full">
+                  <h4 className="text-3xl font-black text-[#1b3a5a] mb-2 tracking-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
                     EXPERIENCE
                   </h4>
-                  <div className="border-b-2 border-[#aabfd3] pb-2 mb-6">
-                    <p className="font-bold text-[#1b3a5a] tracking-widest uppercase text-sm">
+                  <div className="border-b-2 border-[#aabfd3] pb-3 mb-8 w-full md:w-auto">
+                    <p className="font-bold text-[#1b3a5a] tracking-widest uppercase text-xs md:text-sm">
                       Electrical | Construction
                     </p>
                   </div>
                   
-                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-light mb-6">
-                    Engineering Specialist with a <strong className="text-[#1b3a5a]">Master's Degree</strong>. <br />
+                  <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-light mb-10 w-full">
+                    Engineering Specialist with a <strong className="text-[#1b3a5a]">Master's Degree</strong>. <br className="hidden md:block"/>
                     Leading huge EPC projects across East Africa in Substations & Industrial Construction.
                   </p>
 
                   {/* Desktop Stats Grid in White Area */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div className="bg-gray-50 border border-gray-200 p-4 rounded text-center shadow-sm">
-                      <div className="text-xl font-black text-[#1b3a5a]">M.Sc.</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">Degree Level</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
+                    <div className="bg-[#f0f4f8] border border-[#aabfd3]/30 p-5 rounded-lg text-center shadow-sm">
+                      <div className="text-2xl font-black text-[#1b3a5a]">M.Sc.</div>
+                      <div className="text-xs text-gray-500 uppercase tracking-widest mt-2 font-semibold">Degree Level</div>
                     </div>
-                    <div className="bg-gray-50 border border-gray-200 p-4 rounded text-center shadow-sm">
-                      <div className="text-xl font-black text-[#1b3a5a]">132kV</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">HV Experience</div>
+                    <div className="bg-[#f0f4f8] border border-[#aabfd3]/30 p-5 rounded-lg text-center shadow-sm">
+                      <div className="text-2xl font-black text-[#1b3a5a]">132kV</div>
+                      <div className="text-xs text-gray-500 uppercase tracking-widest mt-2 font-semibold">HV Experience</div>
                     </div>
-                    <div className="bg-gray-50 border border-gray-200 p-4 rounded text-center shadow-sm">
-                      <div className="text-xl font-black text-[#1b3a5a]">EPC</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">Delivery Model</div>
+                    <div className="bg-[#f0f4f8] border border-[#aabfd3]/30 p-5 rounded-lg text-center shadow-sm">
+                      <div className="text-2xl font-black text-[#1b3a5a]">EPC</div>
+                      <div className="text-xs text-gray-500 uppercase tracking-widest mt-2 font-semibold">Delivery Model</div>
                     </div>
                   </div>
                 </div>
