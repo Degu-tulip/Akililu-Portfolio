@@ -85,16 +85,25 @@ export default function Hero() {
           </h1>
         </motion.div>
 
-        {/* Profile Avatar (moved under name) */}
+        {/* Profile Portrait — large rectangle under name */}
         <motion.div
-           initial={{ opacity: 0, scale: 0.8 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-           className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-[3px] border-electric-blue/50 p-1 mb-10 shadow-[0_0_40px_rgba(0,180,255,0.3)] bg-[#03070f] z-20 mx-auto"
+           initial={{ opacity: 0, scale: 0.9, y: 20 }}
+           animate={{ opacity: 1, scale: 1, y: 0 }}
+           transition={{ duration: 0.9, delay: 0.4, ease: "easeOut" }}
+           className="relative w-56 md:w-72 lg:w-80 mb-10 mx-auto z-20"
         >
-          <img src="/images/profile.jpg" alt="Akililu Tesfaye" className="w-full h-full rounded-full object-cover object-top" />
-          <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(0,180,255,0.5)] pointer-events-none" />
-          <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,180,255,0.2),transparent)] flex items-center justify-center absolute top-0 left-0 -z-10 rounded-full" />
+          {/* Glowing border frame */}
+          <div className="absolute -inset-[3px] rounded-lg bg-gradient-to-b from-electric-blue/80 via-electric-blue/20 to-amber/50 blur-[2px]" />
+          <div className="relative rounded-lg overflow-hidden border border-electric-blue/30 shadow-[0_0_60px_rgba(0,180,255,0.25)]">
+            <img
+              src="/images/profile.jpg"
+              alt="Akililu Tesfaye"
+              className="w-full h-auto object-cover object-top"
+              style={{ aspectRatio: '3/4' }}
+            />
+            {/* Subtle overlay shimmer */}
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent pointer-events-none" />
+          </div>
         </motion.div>
 
         {/* Subtitle */}
