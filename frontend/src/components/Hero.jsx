@@ -92,7 +92,7 @@ export default function Hero() {
            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
            className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-[3px] border-electric-blue/50 p-1 mb-10 shadow-[0_0_40px_rgba(0,180,255,0.3)] bg-[#03070f] z-20 mx-auto"
         >
-          <img src="/images/ake's pic.jpg" alt="Akililu Tesfaye" className="w-full h-full rounded-full object-cover" onError={(e) => { e.target.style.display='none' }} />
+          <img src="/images/profile.jpg" alt="Akililu Tesfaye" className="w-full h-full rounded-full object-cover object-top" />
           <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(0,180,255,0.5)] pointer-events-none" />
           <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,180,255,0.2),transparent)] flex items-center justify-center absolute top-0 left-0 -z-10 rounded-full" />
         </motion.div>
