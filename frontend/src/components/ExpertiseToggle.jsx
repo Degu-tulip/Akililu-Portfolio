@@ -83,7 +83,7 @@ export default function ExpertiseToggle() {
     <section id="expertise" className="py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(0,180,255,0.03),transparent)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full max-w-7xl px-6 flex flex-col items-center">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -183,10 +183,10 @@ export default function ExpertiseToggle() {
               </div>
             </div>
 
-            {/* Right: skill bars */}
-            <div>
+            {/* Bottom: skill bars */}
+            <div className="flex flex-col items-center w-full max-w-2xl mt-10">
               <h4
-                className="text-lg font-bold text-white mb-6 flex items-center gap-2"
+                className="text-lg font-bold text-white mb-6 flex items-center justify-center gap-2"
                 style={{ fontFamily: 'Rajdhani, sans-serif' }}
               >
                 <CheckCircle2 size={18} style={{ color: data.accentHex }} />

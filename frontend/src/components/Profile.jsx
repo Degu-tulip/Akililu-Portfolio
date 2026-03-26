@@ -78,11 +78,11 @@ export default function Profile() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="profile" className="relative py-16 overflow-hidden">
+    <section id="profile" className="relative py-16 overflow-hidden flex flex-col items-center w-full">
       {/* Subtle background accent */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(ellipse_60%_80%_at_100%_50%,rgba(0,180,255,0.04),transparent)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full max-w-7xl px-6 flex flex-col items-center">
         {/* Section header */}
         <motion.div
            initial="hidden"

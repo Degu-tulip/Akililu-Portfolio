@@ -62,10 +62,10 @@ export default function Footer() {
   return (
     <>
       {/* Contact Section */}
-      <section id="contact" className="py-16 relative overflow-hidden">
+      <section id="contact" className="py-16 relative overflow-hidden flex flex-col items-center w-full">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_100%,rgba(0,180,255,0.06),transparent)] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="w-full max-w-7xl px-6 relative z-10 flex flex-col items-center w-full">
           {/* Header */}
           <motion.div
             initial="hidden"

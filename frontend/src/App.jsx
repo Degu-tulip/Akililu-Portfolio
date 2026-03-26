@@ -16,7 +16,7 @@ export default function App() {
       <Navbar />
 
       {/* Main content */}
-      <main className="flex flex-col gap-32 pb-32">
+      <main className="flex flex-col items-center gap-32 pb-32 w-full">
         <Hero />
         <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent max-w-7xl mx-auto w-full" />
         <Profile />

@@ -122,10 +122,10 @@ export default function Projects() {
     : projects.filter((p) => p.type === activeFilter);
 
   return (
-    <section id="projects" className="py-16 relative overflow-hidden">
+    <section id="projects" className="py-16 relative overflow-hidden flex flex-col items-center w-full">
       <div className="absolute inset-0 blueprint-grid opacity-50 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="w-full max-w-7xl px-6 relative z-10 flex flex-col items-center">
         {/* Header */}
         <motion.div
            initial={{ opacity: 0, y: 30 }}
@@ -168,7 +168,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Project grid */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
           {filtered.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}

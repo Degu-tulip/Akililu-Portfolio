@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden blueprint-grid"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden blueprint-grid w-full"
     >
       {/* Background radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(0,180,255,0.07),transparent)]" />
@@ -46,7 +46,7 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 w-full max-w-5xl px-6 flex flex-col items-center text-center">
         {/* Status badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
