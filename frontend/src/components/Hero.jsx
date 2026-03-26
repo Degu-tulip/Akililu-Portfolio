@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Zap, ArrowDown, ChevronRight, Activity } from 'lucide-react';
+import Particles from './Particles';
 
 const floatVariants = {
   animate: {
@@ -18,6 +19,9 @@ export default function Hero() {
     >
       {/* Background radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(0,180,255,0.07),transparent)]" />
+      
+      {/* Motional Background */}
+      <Particles />
 
       {/* Corner accents */}
       <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-electric-blue/30" />
