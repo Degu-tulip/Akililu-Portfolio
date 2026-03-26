@@ -67,9 +67,9 @@ export default function Standards() {
            whileInView="visible"
            viewport={{ once: true }}
            variants={fadeUp}
-           className="mb-16"
+           className="mb-16 flex flex-col items-center text-center w-full"
         >
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line inline-block" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
             04 / GLOBAL STANDARDS & PARTNERSHIPS
           </h2>
         </motion.div>

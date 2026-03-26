@@ -132,9 +132,9 @@ export default function Projects() {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ duration: 0.6 }}
-           className="mb-12"
+           className="mb-12 flex flex-col items-center text-center w-full"
         >
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line inline-block" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
             03 / PROJECT CASE STUDIES
           </h2>
         </motion.div>
@@ -145,7 +145,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.2 }}
-          className="flex gap-2 flex-wrap mb-10"
+          className="flex justify-center gap-2 flex-wrap mb-10 w-full"
         >
           {filters.map(({ key, label, icon: Icon }) => (
             <button

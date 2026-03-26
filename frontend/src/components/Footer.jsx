@@ -72,9 +72,9 @@ export default function Footer() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="mb-14"
+            className="mb-14 flex flex-col items-center text-center w-full"
           >
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line inline-block" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
               05 / CONTACT & CV
             </h2>
           </motion.div>

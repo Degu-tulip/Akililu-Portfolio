@@ -9,7 +9,7 @@ const expertise = {
     accentColor: 'electric-blue',
     accentHex: '#00b4ff',
     tagline: 'High-Voltage Power Systems & Grid Infrastructure',
-    description: 'Delivering high-voltage substations from 11kV to 230kV with complete EPC lifecycle management.',
+    description: 'Delivering full-cycle high-voltage substations (11kV to 230kV) to power critical national grids.',
     skills: [
       { label: 'HV Substation Design', level: 95 },
       { label: 'Protection & Control Systems', level: 90 },
@@ -33,7 +33,7 @@ const expertise = {
     accentColor: 'amber',
     accentHex: '#f59e0b',
     tagline: 'Heavy Industrial Facilities & Infrastructure Delivery',
-    description: 'Managing large-scale industrial parks, plants, and heavy civil infrastructure with strict global standards.',
+    description: 'Managing massive industrial parks, manufacturing plants, and heavy civil construction projects.',
     skills: [
       { label: 'EPC Project Management', level: 96 },
       { label: 'Construction Planning & Scheduling', level: 93 },
@@ -90,9 +90,9 @@ export default function ExpertiseToggle() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-12 flex flex-col items-center text-center w-full"
         >
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line inline-block" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
             02 / DUAL EXPERTISE
           </h2>
         </motion.div>
@@ -103,7 +103,7 @@ export default function ExpertiseToggle() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="flex gap-0 mb-12 max-w-xl"
+          className="flex gap-0 mb-12 max-w-2xl mx-auto w-full"
         >
           {Object.entries(expertise).map(([key, val]) => {
             const TabIcon = val.icon;
@@ -137,7 +137,7 @@ export default function ExpertiseToggle() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -30 }}
             transition={{ duration: 0.4 }}
-            className={`grid lg:grid-cols-2 gap-10 p-8 md:p-12 rounded-sm border relative overflow-hidden
+            className={`flex flex-col items-center text-center gap-12 p-8 md:p-14 md:px-20 rounded-sm border relative overflow-hidden w-full max-w-5xl mx-auto
               ${isBlue
                 ? 'border-electric-blue/25 bg-navy-700/40 border-glow-blue'
                 : 'border-amber/25 bg-navy-700/40 border-glow-amber'
@@ -149,26 +149,28 @@ export default function ExpertiseToggle() {
               style={{ background: `linear-gradient(90deg, ${data.accentHex}, transparent)` }}
             />
 
-            {/* Left: description + specs */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
+            {/* Top: description + specs */}
+            <div className="flex flex-col items-center text-center w-full">
+              <div className="flex flex-col items-center gap-4 mb-8">
                 <div
-                  className="w-12 h-12 rounded-sm flex items-center justify-center"
+                  className="w-16 h-16 rounded-sm flex items-center justify-center"
                   style={{ background: `${data.accentHex}15` }}
                 >
-                  <Icon size={24} style={{ color: data.accentHex }} />
+                  <Icon size={32} style={{ color: data.accentHex }} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-black text-white" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+                  <h3 className="text-3xl md:text-4xl font-black text-white mb-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                     {data.label}
                   </h3>
-                  <p className="text-xs tracking-wider uppercase" style={{ color: data.accentHex }}>
+                  <p className="text-sm md:text-base font-bold tracking-widest uppercase" style={{ color: data.accentHex }}>
                     {data.tagline}
                   </p>
                 </div>
               </div>
 
-              <p className="text-slate-text leading-relaxed mb-8 text-sm">{data.description}</p>
+              <p className="text-white text-xl md:text-2xl leading-relaxed mb-10 max-w-3xl font-light">
+                {data.description}
+              </p>
 
               {/* Specs grid */}
               <div className="grid grid-cols-2 gap-3">

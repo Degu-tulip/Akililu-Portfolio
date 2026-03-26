@@ -89,27 +89,28 @@ export default function Profile() {
            whileInView="visible"
            viewport={{ once: true, margin: '-60px' }}
            variants={fadeUp}
-           className="mb-16"
+           className="mb-12 flex flex-col items-center text-center w-full"
         >
           <h2
-            className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line"
+            className="text-4xl md:text-6xl lg:text-7xl font-black text-electric-blue circuit-line inline-block"
             style={{ fontFamily: 'Rajdhani, sans-serif' }}
           >
             01 / PROFESSIONAL PROFILE
           </h2>
         </motion.div>
 
-        {/* Two-column layout */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left: Bio */}
+        {/* Single-column centered layout */}
+        <div className="flex flex-col items-center w-full max-w-5xl mx-auto gap-16">
+          {/* Top: Bio */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
             variants={fadeUp}
+            className="w-full flex flex-col items-center"
           >
             {/* Name card */}
-            <div className="mb-8 p-6 border border-electric-blue/30 rounded-sm bg-navy-700/50 relative overflow-hidden">
+            <div className="mb-8 p-8 border border-electric-blue/30 rounded-sm bg-navy-700/50 relative overflow-hidden text-center w-full max-w-2xl">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-electric-blue via-transparent to-transparent" />
               <p className="text-xs text-electric-blue font-mono tracking-widest uppercase mb-2">Lead Engineer</p>
               <h3
@@ -123,12 +124,12 @@ export default function Profile() {
               </p>
             </div>
 
-            <div className="space-y-5 text-slate-text leading-relaxed">
-              <p>
-                I am an Engineering Specialist with a Master's degree, blending expertise in Electrical Substations and Industrial Construction.
+            <div className="space-y-6 text-white text-center leading-relaxed">
+              <p className="text-2xl md:text-3xl font-light">
+                Engineering Specialist with a <strong className="text-amber">Master's Degree</strong>.
               </p>
-              <p>
-                With a decade of EPC leadership across East Africa, I partner with global firms to deliver major infrastructure.
+              <p className="text-xl md:text-2xl text-slate-text">
+                Leading huge EPC projects across East Africa in Substations & Industrial Construction.
               </p>
             </div>
 
@@ -147,13 +148,13 @@ export default function Profile() {
             </div>
           </motion.div>
 
-          {/* Right: Highlight cards */}
+          {/* Bottom: Highlight cards */}
           <motion.div
             ref={ref}
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
             variants={stagger}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
           >
             {highlights.map((h, i) => (
               <ProfileHighlight key={h.title} {...h} index={i} />
