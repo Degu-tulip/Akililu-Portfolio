@@ -107,19 +107,8 @@ export default function Profile() {
           
           <div className="bg-white rounded-xl overflow-hidden w-full text-[#1b3a5a] relative">
             
-            {/* The absolute avatar that lives in its own coordinates, immune to flex bugs */}
-            {/* Desktop: left-aligned sliding into the white space. Mobile: perfectly centered sliding into the white space */}
-            <div className="absolute left-1/2 -translate-x-[50%] md:translate-x-0 md:left-8 top-8 md:top-12 w-44 h-44 md:w-52 md:h-52 rounded-full border-[6px] md:border-[10px] border-white md:border-[#1b3a5a] bg-gradient-to-br from-gray-200 to-gray-400 shadow-2xl overflow-hidden flex items-center justify-center z-30">
-               {/* Note to User: Put your photo in frontend/public/profile.jpg! */}
-               <img src="/profile.jpg" alt="Akililu Tesfaye" className="w-full h-full object-cover p-1 bg-white rounded-full" onError={(e) => { e.target.style.display='none' }} />
-               {/* Fallback avatar shape if no image is found */}
-               <div className="w-full h-full bg-[radial-gradient(circle_at_center,#fff,#d1d5db)] flex items-center justify-center absolute -z-10">
-                 <div className="w-20 h-20 rounded-full bg-white/40 blur-xl absolute" />
-               </div>
-            </div>
-
             {/* Dark Blue Header Banner */}
-            <div className="bg-[#1b3a5a] text-white pt-56 pb-8 px-6 md:pt-14 md:pb-12 md:pl-64 md:pr-10 relative min-h-[160px] flex flex-col items-center md:items-start text-center md:text-left z-10 w-full">
+            <div className="bg-[#1b3a5a] text-white pt-10 pb-10 px-6 md:px-12 relative flex flex-col items-center md:items-start text-center md:text-left z-10 w-full">
                 
                 <div className="flex flex-col md:flex-row justify-between items-center w-full gap-8">
                   <div className="flex-1 md:border-r border-white/20 pb-6 md:pb-0 pr-0 md:pr-8 w-full">
@@ -155,16 +144,9 @@ export default function Profile() {
             </div>
 
             {/* Bottom White Area (Experience Line) */}
-            <div className="pt-10 pb-16 px-6 md:pl-64 md:pr-12 relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="pt-12 pb-16 px-6 md:px-12 relative z-10 flex flex-col items-center md:items-start text-center md:text-left w-full">
               
-              {/* Contact indicator below circle */}
-              <div className="md:absolute md:left-14 md:top-8 w-40 text-center mb-10 md:mb-0 flex items-center justify-center mt-4 md:mt-0">
-                <span className="text-[#1b3a5a] font-black text-[10px] md:text-xs tracking-[0.2em] uppercase border-b-2 border-[#1b3a5a] pb-2">
-                  Contact Menu
-                </span>
-              </div>
-
-              <div className="w-full flex flex-col md:flex-row items-center md:items-start gap-6 mb-8 max-w-2xl mx-auto md:mx-0">
+              <div className="w-full flex flex-col md:flex-row items-center md:items-start gap-6 mb-8 mx-auto md:mx-0">
                 <div className="w-12 h-12 rounded bg-[#1b3a5a] text-white flex items-center justify-center flex-shrink-0 shadow-md">
                   <Edit3 size={24} />
                 </div>
