@@ -20,38 +20,36 @@
   --font-mono: 'Share Tech Mono', monospace;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-  width: 100%;
-}
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+  }
 
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: #00b4ff #03070f;
-}
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #00b4ff #03070f;
+  }
 
-body {
-  background-color: #03070f;
-  color: #e2e8f0;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden !important;
-  max-width: 100% !important;
-  width: 100% !important;
-  position: relative;
-}
+  body {
+    background-color: #03070f;
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+  }
 
-#root {
-  overflow-x: hidden !important;
-  width: 100%;
-  max-width: 100%;
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 ::-webkit-scrollbar {
