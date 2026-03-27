@@ -188,9 +188,40 @@ export default function Hero() {
               </div>
             ))}
           </motion.div>
+
+          {/* Mobile-only scroll indicator in flow */}
+          <motion.div
+            variants={floatVariants}
+            animate="animate"
+            className="flex md:hidden flex-col items-center gap-2 mt-12 w-full text-slate-text/40 opacity-50"
+          >
+            <span className="text-[10px] tracking-widest uppercase font-mono">Scroll</span>
+            <div className="w-5 h-8 border border-white/20 rounded-full flex justify-center p-1.5">
+              <motion.div 
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="w-1 h-1.5 bg-electric-blue rounded-full" 
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
 
+      {/* Desktop-only absolute scroll indicator */}
+      <motion.div
+        variants={floatVariants}
+        animate="animate"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-slate-text/40 z-20 pointer-events-none"
+      >
+        <span className="text-xs tracking-widest uppercase font-mono">Scroll</span>
+        <div className="w-6 h-10 border-2 border-white/10 rounded-full flex justify-center p-2">
+          <motion.div 
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="w-1 h-2 bg-electric-blue rounded-full" 
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }
